@@ -2,6 +2,7 @@ package test
 
 import (
 	"fmt"
+	"project/data"
 	"project/util"
 	"testing"
 )
@@ -355,10 +356,37 @@ func TestIsSubsequence(t *testing.T) {
 }
 
 func TestListNode(t *testing.T) {
-/* 	aNode := &util.ListNode{Val: 1}
-	aNode.AddNode(&util.ListNode{Val: 3})
-	aNode.AddNode(&util.ListNode{Val: 6}) */
-	aNode := util.InitNode([]int{1,2,3,4,5})
+	/* 	aNode := &util.ListNode{Val: 1}
+	   	aNode.AddNode(&util.ListNode{Val: 3})
+	   	aNode.AddNode(&util.ListNode{Val: 6}) */
+	aNode := util.InitNode([]int{1, 2, 3, 4, 5})
 	aNode.Traverse()
 	util.HasCycler(aNode)
+}
+
+func TestReverseLinkedList(t *testing.T) {
+	aNode := &data.NodeLeetCode{Val: 0}
+	tmpNode := aNode
+	for i := 1; i < 3; i++ {
+		currHead := &data.NodeLeetCode{Val: i}
+		aNode.Next = currHead
+		aNode = currHead
+	}
+
+	bNode := tmpNode
+	for bNode != nil {
+		fmt.Printf("%d -> ", bNode.Val)
+		bNode = bNode.Next
+	}
+	fmt.Println()
+
+	newTmpNode := util.ReverseList(tmpNode)
+
+	for newTmpNode != nil {
+		fmt.Printf("%d -> ", newTmpNode.Val)
+		newTmpNode = newTmpNode.Next
+	}
+	fmt.Println()
+	fmt.Println(newTmpNode)
+
 }
