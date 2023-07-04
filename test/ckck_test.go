@@ -390,3 +390,28 @@ func TestReverseLinkedList(t *testing.T) {
 	fmt.Println(newTmpNode)
 
 }
+
+func TestRemoveLinkedListElements(t *testing.T) {
+	aNode := data.InitNodeLeetCode([]int{7, 7, 7, 7})
+	aNode.TraverseNodeLeetCode()
+	newNode := util.RemoveLinkedListElements(aNode, 7)
+	newNode.TraverseNodeLeetCode()
+}
+
+func TestPrintTriagle(t *testing.T) {
+	n := 5
+	mid := (n / 2) + 1
+	for i := 1; i <= n; i++ {
+		if i <= mid {
+			for j := 0; j < i; j++ {
+				fmt.Print("*")
+			}
+			fmt.Println()
+		} else {
+			for j := 0; j <= (n - i); j++ {
+				fmt.Print("*")
+			}
+			fmt.Println()
+		}
+	}
+}
