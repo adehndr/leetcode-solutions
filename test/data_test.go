@@ -54,3 +54,14 @@ func TestGraphMatrix(t *testing.T) {
 
 	gM.Print()
 }
+
+func TestBinarySearchTree(t *testing.T) {
+	aBST := data.BinarySearchTree{}
+	aBST.Insert(&data.NodeBinarySearchTree{Data: 5})
+	aBST.Insert(&data.NodeBinarySearchTree{Data: 3})
+	aBST.Insert(&data.NodeBinarySearchTree{Data: 4})
+	aBST.Insert(&data.NodeBinarySearchTree{Data: 1})
+	fmt.Println(aBST)
+	aBST.Remove(5)
+	fmt.Println(aBST)
+}
