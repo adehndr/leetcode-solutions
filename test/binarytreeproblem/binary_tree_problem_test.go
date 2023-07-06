@@ -11,3 +11,7 @@ func TestBinaryTreeLevelOrderTraversal(t *testing.T) {
 		binarytreeproblem.BinaryTreeLevelOrderTraversal(nil),
 	)
 }
+
+func TestAveraging(t *testing.T) {
+	fmt.Println(float64(5)/2)
+}
