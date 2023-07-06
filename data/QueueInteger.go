@@ -30,3 +30,7 @@ func (q *QueueInteger) Contains(n int) bool {
 func (q *QueueInteger) IsEmptyInteger() bool {
 	return len((*q).data) == 0
 }
+
+func (q *QueueInteger) Length() int {
+	return len((*q).data)
+}

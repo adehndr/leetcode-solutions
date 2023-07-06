@@ -8,6 +8,12 @@ type NodeBinarySearchTree struct {
 	right *NodeBinarySearchTree
 }
 
+type NodeBinarySearchTreeLeetCode struct {
+	Val   int
+	Left  *NodeBinarySearchTreeLeetCode
+	Right *NodeBinarySearchTreeLeetCode
+}
+
 type BinarySearchTree struct {
 	node *NodeBinarySearchTree
 }
