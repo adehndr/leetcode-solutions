@@ -234,31 +234,9 @@ func missingNumber(nums []int) int {
 }
 
 func TestFindDisappearedNumbers(t *testing.T) {
-	fmt.Println(findDisappearedNumbers([]int{1, 1}))
+	fmt.Println(arraysproblem.FindDisappearedNumbers2([]int{4,3,2,7,8,2,3,1}))
 }
 
-func findDisappearedNumbers(nums []int) []int {
-	tmpMap := make(map[int]int)
-	result := []int{}
-
-	for i := 1; i <= len(nums); i++ {
-		tmpMap[i] = 0
-	}
-
-	for _, v := range nums {
-		if _, ok := tmpMap[v]; ok {
-			tmpMap[v] = 1
-		}
-	}
-
-	for k, v := range tmpMap {
-		if v == 0 {
-			result = append(result, k)
-		}
-	}
-
-	return result
-}
 
 func TestSingleNumber(t *testing.T) {
 
