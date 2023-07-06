@@ -7,7 +7,7 @@ import (
 )
 
 func TestProductOfArrayExceptSelf(t *testing.T) {
-	fmt.Println(arraysproblem.ProductExceptSelf([]int{1, 2, 3, 4}))
+	fmt.Println(arraysproblem.ProductExceptSelfNeetCode2([]int{1, 2, 3, 4}))
 }
 
 func TestProductOfArrayExceptSelf2(t *testing.T) {

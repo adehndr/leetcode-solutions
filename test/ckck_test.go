@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"project/data"
 	"project/util"
+	"project/util/arraysproblem"
 	"testing"
 )
 
@@ -207,7 +208,7 @@ func TestMissingNumbers(t *testing.T) {
 	// Create Map with ke is the int and the value is count
 	// if equal, count ++
 	// lastl, check if value is 0, if zero return the missing (ke)
-	fmt.Println(missingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1}))
+	fmt.Println(arraysproblem.MissingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1}))
 }
 
 func missingNumber(nums []int) int {
