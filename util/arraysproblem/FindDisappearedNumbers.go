@@ -36,3 +36,26 @@ func FindDisappearedNumbers2(nums []int) []int {
 	}
 	return result
 }
+
+func FindDisappearedNumbersNeetCode(nums []int) []int {
+	result := []int{}
+	for _, v := range nums {
+		i := abs(v) - 1
+		nums[i] = -1 * abs(nums[i])
+	}
+
+	for k, v := range nums {
+		if v > 0 {
+			result = append(result, k+1)
+		}
+	}
+
+	return result
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}

@@ -235,6 +235,7 @@ func missingNumber(nums []int) int {
 
 func TestFindDisappearedNumbers(t *testing.T) {
 	fmt.Println(arraysproblem.FindDisappearedNumbers2([]int{4,3,2,7,8,2,3,1}))
+	fmt.Println(arraysproblem.FindDisappearedNumbersNeetCode([]int{4,3,2,7,8,2,3,1}))
 }
 
 
