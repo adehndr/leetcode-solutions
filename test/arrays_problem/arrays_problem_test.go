@@ -26,3 +26,8 @@ func recAccessSlice(slice []int) int {
 	}
 	return slice[0] * recAccessSlice(slice[1:])
 }
+
+func TestSetZeroes(t *testing.T) {
+	aMatrix := [][]int{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}}
+	arraysproblem.SetZeroes(aMatrix)
+}
