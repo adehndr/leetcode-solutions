@@ -1,4 +1,4 @@
-package util
+package greedy
 
 func BuySellStock(prices []int) int {
 	var tmpResult int

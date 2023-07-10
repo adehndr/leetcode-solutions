@@ -5,6 +5,7 @@ import (
 	"project/data"
 	"project/util"
 	"project/util/arraysproblem"
+	"project/util/greedy"
 	"testing"
 )
 
@@ -232,11 +233,12 @@ func TestFindDisappearedNumbers(t *testing.T) {
 }
 
 func TestBuSellStock(t *testing.T) {
-	util.BuySellStock([]int{7, 1, 5, 3, 6, 4})
+	fmt.Println(greedy.BuySellStock([]int{7, 1, 5, 3, 6, 4}))
 }
 
 func TestCountBits(t *testing.T) {
-	util.CountBits(2)
+	fmt.Println(util.CountBits2(3))
+	fmt.Println(util.CountBits3(3))
 }
 
 func TestFindSmallestGreaterTarget(t *testing.T) {
