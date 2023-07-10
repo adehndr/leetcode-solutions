@@ -234,34 +234,8 @@ func missingNumber(nums []int) int {
 }
 
 func TestFindDisappearedNumbers(t *testing.T) {
-	fmt.Println(arraysproblem.FindDisappearedNumbers2([]int{4,3,2,7,8,2,3,1}))
-	fmt.Println(arraysproblem.FindDisappearedNumbersNeetCode([]int{4,3,2,7,8,2,3,1}))
-}
-
-
-func TestSingleNumber(t *testing.T) {
-
-}
-
-func singleNumber(nums []int) int {
-	tmpMap := make(map[int]int)
-
-	for _, v := range nums {
-		if _, ok := tmpMap[v]; ok {
-			tmpMap[v] = 2
-		} else {
-			tmpMap[v] = 1
-		}
-	}
-
-	for k, v := range tmpMap {
-		if v == 1 {
-			return k
-		}
-	}
-
-	return -1
-
+	fmt.Println(arraysproblem.FindDisappearedNumbers2([]int{4, 3, 2, 7, 8, 2, 3, 1}))
+	fmt.Println(arraysproblem.FindDisappearedNumbersNeetCode([]int{4, 3, 2, 7, 8, 2, 3, 1}))
 }
 
 func TestBuSellStock(t *testing.T) {
@@ -394,4 +368,10 @@ func TestPrintTriagle(t *testing.T) {
 			fmt.Println()
 		}
 	}
+}
+
+func TestSingleNumber(t *testing.T) {
+	fmt.Println(
+		arraysproblem.SingleNumberBitManipulation([]int{1, 2, 2}),
+	)
 }
