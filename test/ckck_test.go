@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"project/data"
 	"project/util"
+	sortingUtil "project/util/sorting"
 	"project/util/arraysproblem"
 	"project/util/greedy"
 	"testing"
@@ -263,7 +264,7 @@ func TestStack(t *testing.T) {
 }
 
 func TestMajoritElement(t *testing.T) {
-	fmt.Println(util.MajorityElement([]int{2, 1, 1, 1, 1, 2, 2}))
+	fmt.Println(sortingUtil.MajorityElement([]int{2, 1, 1, 1, 1, 2, 2}))
 }
 
 func TestFibonnacoMemoizeBottomUp(t *testing.T) {
