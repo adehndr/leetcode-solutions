@@ -37,13 +37,6 @@ func binarSearch(input []int, target int) (result int) {
 	return result
 }
 
-func TestMergeSort(t *testing.T) {
-	anInput := []int{7, 9, 2, 3, 5, 0, 1, 8, 6, 7}
-	// anInput := []int{1, 0}
-	mergeSort(anInput)
-	fmt.Println(anInput)
-}
-
 func mergeSort(arr []int) {
 	if len(arr) <= 1 {
 		return

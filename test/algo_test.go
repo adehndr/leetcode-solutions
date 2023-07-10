@@ -1,7 +1,10 @@
 package test
 
 import (
+	"fmt"
 	"project/algo"
+	"project/algo/search"
+	"project/algo/sorting"
 	"project/data"
 	"testing"
 )
@@ -69,4 +72,15 @@ func TestBFSAlgoOptimized(t *testing.T) {
 
 	gM.Print()
 	algo.BreadthFirstSearchOptimized(&gM, 1)
+}
+
+func TestMergeSort(t *testing.T) {
+	input := []int{4,3,2,1}
+	sorting.MergeSort(input)
+	fmt.Println(input)
+}
+
+func TestBinarySearch(t *testing.T) {
+	nums := []int{1,2,3,4,5,6}
+	fmt.Println(search.BinarySearch(nums,-3))
 }
