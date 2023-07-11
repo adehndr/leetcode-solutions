@@ -1,7 +1,6 @@
 package sorting
 
 func MergeSort(nums []int) {
-	// [3 , 1 , 2]
 
 	if len(nums) <= 1 {
 		return
@@ -16,7 +15,6 @@ func MergeSort(nums []int) {
 	MergeSort(tempLeft)
 	MergeSort(tempRight)
 	merge(nums, tempLeft, tempRight)
-
 }
 
 func merge(arr, left, right []int) {
