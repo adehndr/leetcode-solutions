@@ -289,12 +289,6 @@ func TestSaveIndexOnList(t *testing.T) {
 	fmt.Println(aMap)
 }
 
-func TestMoveZeroes(t *testing.T) {
-	nms := []int{0, 1, 0, 2}
-	util.MoveZeroesBruteForce(nms)
-	fmt.Println(nms)
-}
-
 func TestTwoSums(t *testing.T) {
 	nums := []int{2, 7, 11, 15}
 	target := 22

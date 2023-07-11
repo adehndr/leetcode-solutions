@@ -21,3 +21,10 @@ func TestAccessCharacter(t *testing.T) {
 	anInput := "ade"
 	fmt.Println(string(anInput[2]))
 }
+
+func TestMoveZeroes(t *testing.T) {
+	nums := []int{0,1,0,3,12}
+	// nums := []int{1,0}
+	twopointers.MoveZeroes(nums)
+	fmt.Println(nums)
+}
