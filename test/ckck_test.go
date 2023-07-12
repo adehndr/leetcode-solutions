@@ -221,15 +221,15 @@ func TestCountBits(t *testing.T) {
 }
 
 func TestFindSmallestGreaterTarget(t *testing.T) {
-	tmp := []string{"c", "f", "j"}
-	target := "g"
+	tmp := []string{"e","e","e","e","e","e","n","n","n","n"}
+	target := "e"
 	tmp2 := []byte{}
 	for _, v := range tmp {
 		tmp2 = append(tmp2, v[0])
 	}
-	fmt.Println(tmp2)
+	fmt.Println(tmp2, target, target[0])
 
-	util.FindSmallestGreaterTarget(tmp2, target[0])
+	fmt.Println(string(util.FindSmallestGreaterTarget(tmp2, target[0])))
 }
 
 func TestSortedSquareRoot(t *testing.T) {
