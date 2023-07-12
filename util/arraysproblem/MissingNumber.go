@@ -1,6 +1,6 @@
 package arraysproblem
 
-func MissingNumber(nums []int) int {
+func missingNumber(nums []int) int {
 	hMap := make(map[int]int)
 
 	for _, v := range nums {
@@ -14,4 +14,16 @@ func MissingNumber(nums []int) int {
 	}
 
 	return -1
+}
+
+func missingNumber2(nums []int) int {
+	result := (len(nums) * (len(nums) + 1) ) / 2
+	for _, v := range nums {
+		result -= v
+	}
+	return result
+}
+
+func MissingNumber(nums []int) int {
+	return missingNumber2(nums)
 }

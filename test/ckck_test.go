@@ -206,28 +206,6 @@ func TestMissingNumbers(t *testing.T) {
 	fmt.Println(arraysproblem.MissingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1}))
 }
 
-func missingNumber(nums []int) int {
-	tmpMap := make(map[int]int)
-
-	for i := 1; i <= len(nums); i++ {
-		tmpMap[i] = 0
-	}
-
-	for _, v := range nums {
-		if _, ok := tmpMap[v]; ok {
-			tmpMap[v] = 1
-		}
-	}
-
-	for k, v := range tmpMap {
-		if v == 0 {
-			return k
-		}
-	}
-
-	return 0
-}
-
 func TestFindDisappearedNumbers(t *testing.T) {
 	fmt.Println(arraysproblem.FindDisappearedNumbers2([]int{4, 3, 2, 7, 8, 2, 3, 1}))
 	fmt.Println(arraysproblem.FindDisappearedNumbersNeetCode([]int{4, 3, 2, 7, 8, 2, 3, 1}))
