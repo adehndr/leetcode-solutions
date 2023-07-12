@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"project/data"
 	"project/util"
-	sortingUtil "project/util/sorting"
 	"project/util/arraysproblem"
 	"project/util/greedy"
+	sortingUtil "project/util/sorting"
 	"testing"
 )
 
@@ -220,21 +220,9 @@ func TestCountBits(t *testing.T) {
 	fmt.Println(util.CountBits3(3))
 }
 
-func TestFindSmallestGreaterTarget(t *testing.T) {
-	tmp := []string{"e","e","e","e","e","e","n","n","n","n"}
-	target := "e"
-	tmp2 := []byte{}
-	for _, v := range tmp {
-		tmp2 = append(tmp2, v[0])
-	}
-	fmt.Println(tmp2, target, target[0])
-
-	fmt.Println(string(util.FindSmallestGreaterTarget(tmp2, target[0])))
-}
-
 func TestSortedSquareRoot(t *testing.T) {
-	input := []int{-4, -1, 0, 3, 10}
-	util.SortedSquareRoot(input)
+	input := []int{-5,-1,0,3,9}
+	fmt.Println(util.SortedSquareRoot(input))
 }
 
 func TestStack(t *testing.T) {

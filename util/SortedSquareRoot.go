@@ -1,14 +1,7 @@
 package util
 
 func SortedSquareRoot(nums []int) []int {
-	result := []int{}
-
-	for _, v := range nums {
-		result = append(result, v*v)
-	}
-	mergeSort(result)
-
-	return result
+	return sortedSquareRoot2(nums)
 }
 
 func mergeSort(arr []int) {
@@ -57,4 +50,42 @@ func sort(arr, left, right []int) {
 		r += 1
 		i += 1
 	}
+}
+
+func sortedSquareRoot(nums []int) []int {
+	result := []int{}
+
+	for _, v := range nums {
+		result = append(result, v*v)
+	}
+	mergeSort(result)
+
+	return result
+}
+
+func sortedSquareRoot2(nums []int) []int {
+	result := make([]int, len(nums))
+	end := len(result) - 1
+	l := 0
+	r := len(nums) - 1
+
+	for l <= r {
+		if abs(nums[l]) < abs(nums[r]) {
+			result[end] = nums[r] * nums[r]
+			r -= 1
+			} else {
+			result[end] = nums[l] * nums[l]
+			l += 1
+		}
+		end -= 1
+	}
+
+	return result
+}
+
+func abs(input int) int {
+	if input < 0 {
+		return -1 * input
+	}
+	return input
 }
