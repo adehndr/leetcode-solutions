@@ -3,7 +3,7 @@ package arraysproblem
 import "fmt"
 
 func LongestConsecutiveSequence(nums []int) int {
-	return longestConsecutiveSequence(nums)
+	return longestConsecutiveSequence2(nums)
 }
 
 func longestConsecutiveSequence(nums []int) int {
@@ -81,4 +81,35 @@ func merge(arr, left, right []int) {
 		r += 1
 		i += 1
 	}
+}
+
+func longestConsecutiveSequence2(nums []int) int {
+
+	if len(nums) == 0 {
+		return 0
+	}
+
+	var longest int
+	hMap := make(map[int]bool)
+
+	for _, v := range nums {
+		hMap[v] = true
+	}
+
+	for _, v := range nums {
+		if !hMap[v-1] {
+			currentCount := 1
+			currentVal := v
+			for hMap[currentVal+1] {
+				currentCount += 1
+				currentVal += 1
+			}
+
+			if currentCount >= longest {
+				longest = currentCount
+			}
+		}
+	}
+
+	return longest
 }
