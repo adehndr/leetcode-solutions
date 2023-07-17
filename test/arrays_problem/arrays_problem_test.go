@@ -38,3 +38,8 @@ func TestLongestConsecutiveSequence(t *testing.T) {
 	// nums := []int{1,2,0,1}
 	fmt.Println(arraysproblem.LongestConsecutiveSequence(nums))
 }
+
+func TestMinimumSwaps2(t *testing.T) {
+	input := []int32{4,3,1,2}
+	fmt.Println(arraysproblem.MinimumSwaps2(input))
+}
