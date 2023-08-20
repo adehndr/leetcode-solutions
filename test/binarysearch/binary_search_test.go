@@ -17,3 +17,8 @@ func TestFindSmallestGreaterThanTarget(t *testing.T) {
 
 	fmt.Println(string(binarysearch.FindSmallestGreaterTarget(tmp2, target[0])))
 }
+
+func TestFindPeakElement(t *testing.T) {
+	tmp := []int{3,4,5}
+	fmt.Println(binarysearch.FindPeakElement(tmp))
+}
