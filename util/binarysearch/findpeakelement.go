@@ -3,7 +3,7 @@ package binarysearch
 import "fmt"
 
 func FindPeakElement(nums []int) int {
-	return findPeakElement1(nums)
+	return findPeakElementOptimized(nums)
 }
 
 func findPeakElement1(nums []int) int {
@@ -36,4 +36,21 @@ func findPeakElement1(nums []int) int {
 		mid = left + (right-left)/2
 	}
 	return result
+}
+
+func findPeakElementOptimized(nums []int) int {
+	left := 0
+	right := len(nums) - 1
+	mid := left + (right-left)/2
+	for left <= right {
+		if mid > 0 && nums[mid-1] > nums[mid] {
+			right = mid - 1
+		} else if mid < len(nums)-1 && nums[mid+1] > nums[mid] {
+			left = mid + 1
+		} else {
+			return mid
+		}
+		mid = left + (right-left)/2
+	}
+	return -1
 }
