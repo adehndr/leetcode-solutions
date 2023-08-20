@@ -28,3 +28,8 @@ func TestMoveZeroes(t *testing.T) {
 	twopointers.MoveZeroes(nums)
 	fmt.Println(nums)
 }
+
+func TestContainerWithMostWater(t *testing.T) {
+	// fmt.Println(twopointers.ContainerWithMostWater([]int{1,8,6,2,5,4,8,3,7}))
+	fmt.Println(twopointers.ContainerWithMostWater([]int{2,3,4,5,18,17,6}))
+}

@@ -1,6 +1,10 @@
 package search
 
 func BinarySearch(input []int, target int) int {
+	return binarySearchOptimized(input, target)
+}
+
+func binarySearchOptimized(input []int, target int) int {
 	low := 0
 	high := len(input) - 1
 	result := -1
