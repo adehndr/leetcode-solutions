@@ -2,6 +2,7 @@ package test
 
 import (
 	"fmt"
+	"math"
 	"project/data"
 	"project/util"
 	"project/util/arraysproblem"
@@ -330,4 +331,57 @@ func TestSingleNumber(t *testing.T) {
 	fmt.Println(
 		arraysproblem.SingleNumberBitManipulation([]int{1, 2, 2}),
 	)
+}
+
+func TestSumUpBruteForce(t *testing.T) {
+	a1 := []int{-1,3,8,2,9,5}
+	a2 := []int{4,1,2,10,5,20}
+	target := 24
+
+	init := a1[0] + a2[0]
+	result := make([]int,2)
+	for _, v1 := range a1 {
+		for _, v2 := range a2 {
+			tmp := target - (v1 + v2) 
+			if tmp <= (target - init) && tmp >= 0{
+				result[0] = v1
+				result[1] = v2
+				init = v1 + v2
+			}
+		}
+	}
+	fmt.Println(result)
+}
+
+func TestSumUpEfficient(t *testing.T) {
+	a1 := []int{-1,3,8,2,9,5}
+	a2 := []int{4,1,2,10,5,20}
+	target := 24
+
+	hMap := make(map[int]int)
+	for i, v := range a1 {
+		hMap[v] = i
+	}
+	i := 0
+	result := make([]int,2)
+	outer:
+	for {
+		counter := int(math.Pow(-1,float64(i)))
+		counter *= i
+		target += counter
+
+		for idx, v := range a2 {
+			if v, ok := hMap[target-v]; ok {
+				result[0] = v
+				result[1] = idx 
+				break outer
+			}
+		}
+		fmt.Println("ini i ke", i, "dengan target", target)
+		if i == 2 {
+			break
+		}
+		i += 1
+	}
+	fmt.Println(result)
 }
